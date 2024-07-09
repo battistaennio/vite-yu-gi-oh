@@ -1,0 +1,10 @@
+@use "./partials/variables" as *;
+
+// font Montserrat
+@import '@fontsource-variable/montserrat';
+
+
+body {
+    font-family: $main-font;
+    color: $text-color;
+}
