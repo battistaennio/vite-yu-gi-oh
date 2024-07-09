@@ -4,7 +4,14 @@
 @import '@fontsource-variable/montserrat';
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: $main-font;
     color: $text-color;
+    background-color: $primary-color;
 }
