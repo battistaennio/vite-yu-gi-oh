@@ -1,6 +1,13 @@
 <script>
+//import axios
+import axios from "axios";
+
+//import components
 import AppHeader from './components/AppHeader.vue';
 import CardList from './components/CardList.vue';
+
+//import store
+import { store } from './store';
 
 
 export default{
@@ -9,6 +16,29 @@ export default{
     AppHeader,
     CardList,
 
+  },
+
+  data(){
+    return{
+      store,
+    }
+  },
+
+  methods: {
+    //chiamata API
+    getCard(){
+      axios.get(store.apiURL)
+      .then(response => {
+        store.cardsList = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    },
+  },
+
+  created(){
+    this.getCard();
   }
 }
 </script>
@@ -20,7 +50,7 @@ export default{
   <main>
 
     <CardList />
-    
+
   </main>
 
 </template>
