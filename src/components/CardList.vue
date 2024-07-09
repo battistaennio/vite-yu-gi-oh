@@ -1,18 +1,27 @@
 <script>
 import SingleCard from "./SingleCard.vue";
 
+//import store
+import { store } from '../store';
+
+
 export default {
     name: "CardList",
     components: {
-        SingleCard
-    }
+        SingleCard,
+    },
+    data(){
+        return{
+            store,
+        }
+    },
 }
 </script>
 
 <template>
     <section>
-        
-        <SingleCard />
+
+        <SingleCard v-for="carta in store.cardsList" :key="carta.id" :info="carta" />
 
     </section>
 </template>

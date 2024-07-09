@@ -1,14 +1,15 @@
 <script>
 export default {
     name: "SingleCard",
+    props: {info : Object},
 }
 </script>
 
 <template>
     <div class="card-box">
-        <img src="https://qph.cf2.quoracdn.net/main-qimg-98732885e1731509a4ce78d853dd0173-pjlq" alt="">
-        <h3>Nome carta</h3>
-        <span>Tipo</span>
+        <img v-for="img in info.card_images" :src="img.image_url" alt="">
+        <h3>{{info.name}}</h3>
+        <span>{{info.type}}</span>
     </div>
 </template>
 
@@ -31,6 +32,7 @@ export default {
         margin: 10px 0;
         color: $secondary-color;
         text-transform: uppercase;
+        padding: 0 3px;
     }
 
     span{

@@ -29,7 +29,7 @@ export default{
     getCard(){
       axios.get(store.apiURL)
       .then(response => {
-        store.cardsList = response.data;
+        store.cardsList = response.data.data;
       })
       .catch(error => {
         console.log(error);
