@@ -1,10 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import CardList from './components/CardList.vue';
+
 
 export default{
   name: "app",
   components: {
     AppHeader,
+    CardList,
 
   }
 }
@@ -16,6 +19,8 @@ export default{
 
   <main>
 
+    <CardList />
+    
   </main>
 
 </template>
@@ -26,7 +31,7 @@ export default{
 
 main{
   background-color: $secondary-color;
-padding: 40px;
+  padding: 40px;
   margin: 30px 100px;
   min-height: 200px;
 }
