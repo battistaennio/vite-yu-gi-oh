@@ -50,7 +50,7 @@ export default{
   <AppHeader />
 
   <main>
-    <FilterCards />
+    <FilterCards @filter="getCard" />
     <CardList />
 
   </main>

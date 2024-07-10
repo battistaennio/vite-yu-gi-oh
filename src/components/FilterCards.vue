@@ -2,7 +2,6 @@
 //import store
 import { store } from '../store';
 
-
 export default {
     name: "FilterCards",
     // components: {
@@ -18,7 +17,7 @@ export default {
 
 <template>
     <section>
-        <select name="" id="">
+        <select v-model="store.filterText" @change="$emit('filter')">
             <option value="">pippo</option>
             <option value="">pluto</option>
             <option value="">paperino</option>
