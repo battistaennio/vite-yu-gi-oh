@@ -5,16 +5,18 @@ import axios from "axios";
 //import components
 import AppHeader from './components/AppHeader.vue';
 import CardList from './components/CardList.vue';
+import FilterCards from "./components/FilterCards.vue";
+
 
 //import store
 import { store } from './store';
-
 
 export default{
   name: "app",
   components: {
     AppHeader,
     CardList,
+    FilterCards,
 
   },
 
@@ -48,7 +50,7 @@ export default{
   <AppHeader />
 
   <main>
-
+    <FilterCards />
     <CardList />
 
   </main>
@@ -60,8 +62,6 @@ export default{
 @use "./style/partials/variables" as *;
 
 main{
-  background-color: $secondary-color;
-  padding: 40px;
   margin: 30px 100px;
   min-height: 200px;
 }
