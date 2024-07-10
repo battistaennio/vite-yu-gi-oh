@@ -29,9 +29,17 @@ export default{
   methods: {
     //chiamata API
     getCard(){
-      axios.get(store.apiURL)
+      let endPoint = store.apiURLnormal
+      axios.get(endPoint)
       .then(response => {
         store.cardsList = response.data.data;
+        // console.log(store.cardsList);
+        for(let i = 0; i < store.cardsList.length; i++){
+          if(store.cardsList[i].archetype !== undefined && !store.archetypeList.includes(store.cardsList[i].archetype)){
+            store.archetypeList.push(store.cardsList[i].archetype)
+          }
+        }
+        console.log(store.archetypeList);
       })
       .catch(error => {
         console.log(error);

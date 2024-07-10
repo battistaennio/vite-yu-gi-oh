@@ -21,7 +21,7 @@ export default {
 <template>
     <section>
 
-        <SingleCard v-for="carta in store.cardsList" :key="carta.id" :info="carta"AppHeader />
+        <SingleCard v-for="carta in store.cardsList" :key="carta.id" :info="carta" />
 
     </section>
 </template>

@@ -18,9 +18,7 @@ export default {
 <template>
     <section>
         <select v-model="store.filterText" @change="$emit('filter')">
-            <option value="">pippo</option>
-            <option value="">pluto</option>
-            <option value="">paperino</option>
+            <option v-for="(archetype, i) in store.archetypeList" :key="i" :value="archetype">{{archetype}}</option>
         </select>
     </section>
 </template>
