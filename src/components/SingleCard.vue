@@ -9,7 +9,7 @@ export default {
     <div class="card-box">
         <img :src="info.card_images[0].image_url" :alt="info.name">
         <h3>{{info.name}}</h3>
-        <span>{{info.type}}</span>
+        <span>{{info.archetype}}</span>
     </div>
 </template>
 

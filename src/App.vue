@@ -38,22 +38,27 @@ export default{
       axios.get(endPoint)
       .then(response => {
         store.cardsList = response.data.data;
-
-        for(let i = 0; i < store.cardsList.length; i++){
-          if(store.cardsList[i].archetype !== undefined && !store.archetypeList.includes(store.cardsList[i].archetype)){
-            store.archetypeList.push(store.cardsList[i].archetype)
-          }
-        }
-
       })
       .catch(error => {
         console.log(error);
       })
     },
+
+    getArchetype(){
+      axios.get(store.apiOptionURL)
+      .then(risultato => {
+        store.archetypeList = risultato.data;
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
+    
   },
 
   created(){
     this.getCard();
+    this.getArchetype();
   }
 }
 </script>
