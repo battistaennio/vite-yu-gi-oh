@@ -7,7 +7,7 @@ export default {
 
 <template>
     <div class="card-box">
-        <img v-for="img in info.card_images" :src="img.image_url" alt="">
+        <img :src="info.card_images[0].image_url" :alt="info.name">
         <h3>{{info.name}}</h3>
         <span>{{info.type}}</span>
     </div>
@@ -24,7 +24,6 @@ export default {
     margin: 10px 0;
 
     img{
-        //debug
         width: 100%;
     }
 

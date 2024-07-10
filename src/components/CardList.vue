@@ -21,7 +21,7 @@ export default {
 <template>
     <section>
 
-        <SingleCard v-for="carta in store.cardsList" :key="carta.id" :info="carta" />
+        <SingleCard v-for="carta in store.cardsList" :key="carta.id" :info="carta"AppHeader />
 
     </section>
 </template>
@@ -33,5 +33,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 40px;
+    background-color: $secondary-color;
 }
 </style>
