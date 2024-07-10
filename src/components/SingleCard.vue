@@ -17,11 +17,11 @@ export default {
 @use "../style/partials/variables" as *;
 
 .card-box{
-    width: calc(100% / 5 - 15px);
+    width: calc(100% / 5 - 20px);
     text-align: center;
     background-color: $primary-color;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px;
 
     img{
         width: 100%;
